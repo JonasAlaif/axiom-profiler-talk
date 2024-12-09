@@ -1,0 +1,1584 @@
+[tool-version] Z3 4.8.7
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #1 true
+[mk-app] #2 false
+[mk-app] #3 pi
+[mk-app] #4 euler
+[mk-var] datatype#0 0
+[mk-var] datatype#1 1
+[mk-app] datatype#2 insert datatype#0 datatype#1
+[mk-app] datatype#3 pattern datatype#2
+[mk-app] datatype#4 head datatype#2
+[mk-app] datatype#5 = datatype#0 datatype#4
+[mk-quant] datatype#6 constructor_accessor_axiom 2 datatype#3 datatype#5
+[attach-var-names] datatype#6 (;k!0) (;List)
+[mk-app] datatype#7 tail datatype#2
+[mk-app] datatype#8 = datatype#1 datatype#7
+[mk-quant] datatype#9 constructor_accessor_axiom 2 datatype#3 datatype#8
+[attach-var-names] datatype#9 (;k!0) (;List)
+[mk-app] #5 bv
+[attach-meaning] #5 bv #b1
+[mk-app] #6 bv
+[attach-meaning] #6 bv #b0
+[attach-meaning] #5 bv #b1
+[attach-meaning] #6 bv #b0
+[attach-meaning] #6 bv #b0
+[mk-var] #7 0
+[mk-var] #8 1
+[mk-var] #9 2
+[mk-var] #10 3
+[mk-var] #11 4
+[mk-var] #12 5
+[mk-var] #13 6
+[mk-var] #14 7
+[mk-var] #15 8
+[mk-var] #16 9
+[mk-var] #17 10
+[mk-var] #18 11
+[mk-var] #19 12
+[mk-var] #20 13
+[mk-var] #21 14
+[mk-app] #22 + #15 #13
+[mk-proof] #23 true-axiom #1
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #6 bv #b0
+[mk-var] #23 0
+[mk-var] #15 1
+[mk-var] #13 2
+[mk-var] #22 3
+[mk-var] #7 4
+[mk-var] #21 5
+[mk-var] #20 6
+[mk-var] #19 7
+[mk-var] #18 8
+[mk-var] #17 9
+[mk-var] #16 10
+[mk-var] #14 11
+[mk-var] #12 12
+[mk-var] #11 13
+[mk-var] #10 14
+[mk-app] #9 + #18 #20
+[mk-proof] #8 true-axiom #1
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-app] #24 empty
+[mk-app] #25 Int
+[attach-meaning] #25 arith 1
+[mk-app] #26 truncate_by #24 #25
+[mk-app] #27 = #26 #24
+[mk-proof] #28 asserted #27
+[mk-app] #29 = #27 #27
+[mk-proof] #30 refl #29
+[mk-app] #29 pop #24
+[mk-app] #30 = #29 #24
+[mk-proof] #31 asserted #30
+[mk-app] #32 = #30 #30
+[mk-proof] #33 refl #32
+[mk-var] #32 1
+[mk-var] #33 0
+[mk-app] #34 truncate_by #32 #33
+[mk-app] #35 pop #34
+[mk-app] #36 + #33 #25
+[mk-app] #37 truncate_by #32 #36
+[mk-app] #38 = #35 #37
+[mk-app] #39 pattern #35
+[mk-quant] #40 simplify_pop 2 #39 #38
+[attach-var-names] #40 (|y| ; |Int|) (|x| ; |Vec|)
+[mk-proof] #41 asserted #40
+[mk-app] #42 + #25 #33
+[inst-discovered] theory-solving 0x0 arith# ; #36
+[mk-app] #43 = #36 #42
+[mk-proof] #44 rewrite #43
+[instance] 0x0 #43
+[end-of-instance]
+[mk-app] #45 truncate_by #32 #42
+[mk-app] #46 = #37 #45
+[mk-proof] #47 monotonicity #44 #46
+[mk-app] #48 = #35 #45
+[mk-app] #49 = #38 #48
+[mk-proof] #50 monotonicity #47 #49
+[mk-quant] #51 simplify_pop 2 #39 #48
+[attach-var-names] #51 (|y| ; |Int|) (|x| ; |Vec|)
+[mk-lambda] #52 null 2 #50
+[mk-proof] #53 proof-bind #52
+[mk-app] #54 = #40 #51
+[mk-proof] #55 quant-intro #53 #54
+[mk-proof] #56 mp #41 #55 #51
+[attach-meaning] #5 bv #b1
+[attach-meaning] #6 bv #b0
+[attach-meaning] #5 bv #b1
+[attach-meaning] #6 bv #b0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-app] #57 = #27 #27
+[mk-proof] #58 refl #57
+[mk-app] #57 = #30 #30
+[mk-proof] #58 refl #57
+[inst-discovered] theory-solving 0x0 arith# ; #36
+[instance] 0x0 #43
+[end-of-instance]
+[mk-app] #57 = #27 #27
+[mk-proof] #58 refl #57
+[mk-app] #57 = #30 #30
+[mk-proof] #58 refl #57
+[mk-app] #57 = #51 #51
+[mk-proof] #58 refl #57
+[mk-app] #57 = #27 #27
+[mk-proof] #58 refl #57
+[mk-app] #57 = #30 #30
+[mk-proof] #58 refl #57
+[mk-app] #57 = #51 #51
+[mk-proof] #58 refl #57
+[mk-app] #57 = #27 #27
+[mk-proof] #58 rewrite #57
+[mk-proof] #59 mp #28 #58 #27
+[mk-app] #60 = #30 #30
+[mk-proof] #61 rewrite #60
+[mk-proof] #62 mp #31 #61 #30
+[mk-app] #63 = #51 #51
+[mk-proof] #64 rewrite #63
+[mk-proof] #65 mp #56 #64 #51
+[mk-proof] #66 refl #57
+[mk-proof] #66 refl #60
+[inst-discovered] theory-solving 0x0 arith# ; #42
+[mk-app] #66 = #42 #42
+[mk-proof] #67 rewrite #66
+[instance] 0x0 #66
+[end-of-instance]
+[mk-app] #68 = #45 #45
+[mk-proof] #69 monotonicity #67 #68
+[mk-app] #70 = #48 #48
+[mk-proof] #71 monotonicity #69 #70
+[mk-proof] #72 refl #63
+[mk-proof] #66 refl #57
+[mk-proof] #66 refl #60
+[mk-proof] #66 refl #63
+[mk-proof] #66 refl #57
+[mk-proof] #66 refl #60
+[mk-proof] #66 refl #63
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-proof] #66 refl #57
+[mk-proof] #66 refl #60
+[mk-proof] #66 refl #63
+[begin-check] 0
+[mk-proof] #66 refl #57
+[mk-proof] #66 refl #60
+[mk-proof] #66 refl #63
+[mk-app] #66 = #51 #1
+[mk-proof] #67 iff-true #65 #66
+[mk-proof] #66 refl #63
+[mk-app] #66 = #51 #1
+[mk-proof] #67 iff-true #65 #66
+[mk-proof] #68 refl #60
+[mk-proof] #68 refl #57
+[mk-app] #66 ~ #27 #27
+[mk-proof] #67 refl #66
+[mk-proof] #66 refl #57
+[mk-app] #66 ~ #30 #30
+[mk-proof] #67 refl #66
+[mk-proof] #66 refl #60
+[mk-app] #66 ~ #48 #48
+[mk-proof] #67 refl #66
+[mk-lambda] #68 null 2 #67
+[mk-proof] #69 proof-bind #68
+[mk-app] #70 ~ #51 #51
+[mk-proof] #71 nnf-pos #69 #70
+[mk-proof] #72 mp~ #65 #71 #51
+[mk-proof] #73 refl #63
+[mk-proof] #73 refl #57
+[mk-proof] #73 refl #60
+[mk-proof] #73 refl #63
+[mk-proof] #73 refl #57
+[mk-proof] #73 refl #60
+[mk-proof] #73 refl #63
+[mk-proof] #73 refl #57
+[mk-proof] #73 refl #60
+[mk-proof] #73 refl #63
+[mk-proof] #73 mp #59 #58 #27
+[mk-proof] #73 mp #62 #61 #30
+[mk-proof] #73 mp #72 #64 #51
+[mk-proof] #73 refl #57
+[mk-proof] #73 refl #60
+[mk-proof] #73 refl #63
+[mk-proof] #73 refl #57
+[mk-proof] #73 refl #60
+[mk-proof] #73 refl #63
+[mk-proof] #73 refl #57
+[mk-proof] #73 refl #60
+[mk-var] #73 2
+[mk-var] #74 1
+[mk-app] #75 ?store #73 #74 #33
+[mk-app] #76 ?select #75 #74
+[mk-app] #77 = #76 #33
+[mk-app] #78 pattern #75
+[mk-quant] #79 k!70 3 #78 #77
+[attach-var-names] #79 (|e| ; |Int|) (|i| ; |Int|) (|a| ; |Int|)
+[mk-var] #80 3
+[mk-app] #81 = #73 #74
+[mk-app] #82 ?store #80 #73 #33
+[mk-app] #83 ?select #82 #74
+[mk-app] #84 ?select #80 #74
+[mk-app] #85 = #83 #84
+[mk-app] #86 or #81 #85
+[mk-app] #87 pattern #83
+[mk-quant] #88 k!75 4 #87 #86
+[attach-var-names] #88 (|e| ; |Int|) (|j| ; |Int|) (|i| ; |Int|) (|a| ; |Int|)
+[mk-app] #89 ?PO #73 #74
+[mk-app] #90 = #89 #25
+[mk-app] #91 not #90
+[mk-app] #92 ?PO #74 #33
+[mk-app] #93 = #92 #25
+[mk-app] #94 not #93
+[mk-app] #95 ?PO #73 #33
+[mk-app] #96 = #95 #25
+[mk-app] #97 or #91 #94 #96
+[mk-app] #98 pattern #89 #92
+[mk-quant] #99 k!81 3 #98 #97
+[attach-var-names] #99 (|t2| ; |Int|) (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #100 ?PO #33 #74
+[mk-app] #101 = #100 #25
+[mk-app] #102 not #101
+[mk-app] #103 = #74 #33
+[mk-app] #104 or #94 #102 #103
+[mk-app] #105 pattern #92 #100
+[mk-quant] #106 k!87 2 #105 #104
+[attach-var-names] #106 (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #107 ?asChild #74 #33
+[mk-app] #108 ?PO #73 #107
+[mk-app] #109 = #108 #25
+[mk-app] #110 not #109
+[mk-app] #111 ?classDown #33 #73
+[mk-app] #112 = #111 #107
+[mk-app] #113 or #110 #112
+[mk-app] #114 pattern #108
+[mk-quant] #115 k!92 3 #114 #113
+[attach-var-names] #115 (|t2| ; |Int|) (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #116 ?f #33
+[mk-app] #117 ?finv #116
+[mk-app] #118 = #117 #33
+[mk-app] #119 pattern #116
+[mk-quant] #120 k!96 1 #119 #118
+[attach-var-names] #120 (|t| ; |Int|)
+[mk-app] #121 ?array #33
+[mk-app] #122 ?PO #74 #121
+[mk-app] #123 = #122 #25
+[mk-app] #124 ?elemtype #74
+[mk-app] #125 ?array #124
+[mk-app] #126 = #74 #125
+[mk-app] #127 not #126
+[mk-app] #128 ?PO #124 #33
+[mk-app] #129 = #128 #25
+[mk-app] #130 not #129
+[mk-app] #131 or #127 #130
+[mk-app] #132 not #131
+[mk-app] #133 = #123 #132
+[mk-app] #134 pattern #122
+[mk-quant] #135 k!102 2 #134 #133
+[attach-var-names] #135 (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #136 ?is #74 #33
+[mk-app] #137 = #136 #25
+[mk-app] #138 not #137
+[mk-app] #139 ?cast #74 #33
+[mk-app] #140 = #139 #74
+[mk-app] #141 or #138 #140
+[mk-app] #142 pattern #139
+[mk-quant] #143 k!107 2 #142 #141
+[attach-var-names] #143 (|t| ; |Int|) (|x| ; |Int|)
+[mk-app] #144 ?Object
+[mk-app] #145 ?PO #33 #144
+[mk-app] #146 = #145 #25
+[mk-app] #147 not #146
+[mk-app] #148 ?null
+[mk-app] #149 = #74 #148
+[mk-app] #150 ?typeof #74
+[mk-app] #151 ?PO #150 #33
+[mk-app] #152 = #151 #25
+[mk-app] #153 or #149 #152
+[mk-app] #154 = #137 #153
+[mk-app] #155 or #147 #154
+[mk-app] #156 pattern #145 #136
+[mk-quant] #157 k!114 2 #156 #155
+[attach-var-names] #157 (|t| ; |Int|) (|x| ; |Int|)
+[mk-app] #158 ?asElems #73
+[mk-app] #159 ?select #158 #74
+[mk-app] #160 ?select #159 #33
+[mk-app] #161 ?elemtype #150
+[mk-app] #162 ?is #160 #161
+[mk-app] #163 = #162 #25
+[mk-app] #164 pattern #160
+[mk-quant] #165 k!119 3 #164 #163
+[attach-var-names] #165 (|i| ; |Int|) (|a| ; |Int|) (|e| ; |Int|)
+[mk-app] #166 - #25
+[mk-app] #167 ?fClosedTime #74
+[mk-app] #168 * #166 #167
+[mk-app] #169 + #33 #168
+[mk-app] #170 Int
+[attach-meaning] #170 arith 0
+[mk-app] #171 <= #169 #170
+[mk-app] #172 ?isAllocated #73 #33
+[mk-app] #173 = #172 #25
+[mk-app] #174 not #173
+[mk-app] #175 ?select #74 #73
+[mk-app] #176 ?isAllocated #175 #33
+[mk-app] #177 = #176 #25
+[mk-app] #178 or #171 #174 #177
+[mk-app] #179 pattern #176
+[mk-quant] #180 k!125 3 #179 #178
+[attach-var-names] #180 (|a0| ; |Int|) (|f| ; |Int|) (|x| ; |Int|)
+[mk-app] #181 ?eClosedTime #73
+[mk-app] #182 * #166 #181
+[mk-app] #183 + #33 #182
+[mk-app] #184 <= #183 #170
+[mk-app] #185 ?isAllocated #80 #33
+[mk-app] #186 = #185 #25
+[mk-app] #187 not #186
+[mk-app] #188 ?select #73 #80
+[mk-app] #189 ?select #188 #74
+[mk-app] #190 ?isAllocated #189 #33
+[mk-app] #191 = #190 #25
+[mk-app] #192 or #184 #187 #191
+[mk-app] #193 pattern #190
+[mk-quant] #194 k!131 4 #193 #192
+[attach-var-names] #194 (|a0| ; |Int|) (|i| ; |Int|) (|e| ; |Int|) (|a| ; |Int|)
+[mk-app] #195 ?asLockSet #33
+[mk-app] #196 ?max #195
+[mk-app] #197 ?select #195 #196
+[mk-app] #198 = #197 #25
+[mk-app] #199 pattern #197
+[mk-quant] #200 k!135 1 #199 #198
+[attach-var-names] #200 (|S| ; |Int|)
+[mk-app] #201 ?isNewArray #33
+[mk-app] #202 = #25 #201
+[mk-app] #203 not #202
+[mk-app] #204 ?typeof #33
+[mk-app] #205 ?arrayType
+[mk-app] #206 ?PO #204 #205
+[mk-app] #207 = #206 #25
+[mk-app] #208 or #203 #207
+[mk-app] #209 pattern #201
+[mk-quant] #210 k!140 1 #209 #208
+[attach-var-names] #210 (|s| ; |Int|)
+[mk-app] #211 ?classLiteral #33
+[mk-app] #212 = #211 #148
+[mk-app] #213 ?Class
+[mk-app] #214 ?is #211 #213
+[mk-app] #215 = #214 #25
+[mk-app] #216 not #215
+[mk-app] #217 ?alloc
+[mk-app] #218 ?isAllocated #211 #217
+[mk-app] #219 = #218 #25
+[mk-app] #220 not #219
+[mk-app] #221 or #212 #216 #220
+[mk-app] #222 not #221
+[mk-app] #223 pattern #211
+[mk-quant] #224 k!146 1 #223 #222
+[attach-var-names] #224 (|t| ; |Int|)
+[mk-app] #225 ?store2 #80 #73 #74 #33
+[mk-app] #226 ?select2 #225 #73 #74
+[mk-app] #227 = #226 #33
+[mk-app] #228 pattern #225
+[mk-quant] #229 k!151 4 #228 #227
+[attach-var-names] #229 (|v| ; |Int|) (|f| ; |Int|) (|o| ; |Int|) (|A| ; |Int|)
+[mk-var] #230 5
+[mk-var] #231 4
+[mk-app] #232 = #231 #73
+[mk-app] #233 ?store2 #230 #231 #80 #33
+[mk-app] #234 ?select2 #233 #73 #74
+[mk-app] #235 ?select2 #230 #73 #74
+[mk-app] #236 = #234 #235
+[mk-app] #237 or #232 #236
+[mk-app] #238 pattern #234
+[mk-quant] #239 k!156 6 #238 #237
+[attach-var-names] #239 (|v| ; |Int|) (|g| ; |Int|) (|p| ; |Int|) (|f| ; |Int|) (|o| ; |Int|) (|A| ; |Int|)
+[mk-app] #240 = #80 #74
+[mk-app] #241 or #240 #236
+[mk-quant] #242 k!161 6 #238 #241
+[attach-var-names] #242 (|v| ; |Int|) (|g| ; |Int|) (|p| ; |Int|) (|f| ; |Int|) (|o| ; |Int|) (|A| ; |Int|)
+[mk-app] #243 ?subtypes #73 #74
+[mk-app] #244 not #243
+[mk-app] #245 ?subtypes #74 #33
+[mk-app] #246 not #245
+[mk-app] #247 ?subtypes #73 #33
+[mk-app] #248 or #244 #246 #247
+[mk-app] #249 pattern #243 #245
+[mk-quant] #250 k!167 3 #249 #248
+[attach-var-names] #250 (|v| ; |Int|) (|u| ; |Int|) (|t| ; |Int|)
+[mk-app] #251 ?subtypes #33 #74
+[mk-app] #252 not #251
+[mk-app] #253 or #246 #252 #103
+[mk-app] #254 pattern #245 #251
+[mk-quant] #255 k!173 2 #254 #253
+[attach-var-names] #255 (|u| ; |Int|) (|t| ; |Int|)
+[mk-app] #256 ?Box #74 #33
+[mk-app] #257 ?UnboxedType #256
+[mk-app] #258 ?System.Object
+[mk-app] #259 ?subtypes #257 #258
+[mk-app] #260 not #259
+[mk-app] #261 = #256 #33
+[mk-app] #262 not #261
+[mk-app] #263 or #260 #262 #103
+[mk-app] #264 pattern #259
+[mk-quant] #265 k!179 2 #264 #263
+[attach-var-names] #265 (|p| ; |Int|) (|x| ; |Int|)
+[mk-app] #266 IntsHeap #80
+[mk-app] #267 ?Smt.true
+[mk-app] #268 = #266 #267
+[mk-app] #269 not #268
+[mk-app] #270 ?AsRepField #74 #33
+[mk-app] #271 ?select2 #80 #73 #270
+[mk-app] #272 ?nullObject
+[mk-app] #273 = #271 #272
+[mk-app] #274 ?ownerRef_
+[mk-app] #275 ?select2 #80 #271 #274
+[mk-app] #276 = #275 #73
+[mk-app] #277 not #276
+[mk-app] #278 ?ownerFrame_
+[mk-app] #279 ?select2 #80 #271 #278
+[mk-app] #280 = #279 #33
+[mk-app] #281 not #280
+[mk-app] #282 or #277 #281
+[mk-app] #283 not #282
+[mk-app] #284 or #269 #273 #283
+[mk-app] #285 pattern #271
+[mk-quant] #286 k!187 4 #285 #284
+[attach-var-names] #286 (|T| ; |Int|) (|f| ; |Int|) (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #287 IntsHeap #73
+[mk-app] #288 = #287 #267
+[mk-app] #289 not #288
+[mk-app] #290 ?AsPeerField #33
+[mk-app] #291 ?select2 #73 #74 #290
+[mk-app] #292 = #291 #272
+[mk-app] #293 ?select2 #73 #291 #274
+[mk-app] #294 ?select2 #73 #74 #274
+[mk-app] #295 = #293 #294
+[mk-app] #296 not #295
+[mk-app] #297 ?select2 #73 #291 #278
+[mk-app] #298 ?select2 #73 #74 #278
+[mk-app] #299 = #297 #298
+[mk-app] #300 not #299
+[mk-app] #301 or #296 #300
+[mk-app] #302 not #301
+[mk-app] #303 or #289 #292 #302
+[mk-app] #304 pattern #291
+[mk-quant] #305 k!195 3 #304 #303
+[attach-var-names] #305 (|f| ; |Int|) (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #306 IntsHeap #74
+[mk-app] #307 = #306 #267
+[mk-app] #308 not #307
+[mk-app] #309 ?select2 #74 #33 #278
+[mk-app] #310 ?PeerGroupPlaceholder_
+[mk-app] #311 = #309 #310
+[mk-app] #312 ?select2 #74 #33 #274
+[mk-app] #313 ?inv_
+[mk-app] #314 ?select2 #74 #312 #313
+[mk-app] #315 ?subtypes #314 #309
+[mk-app] #316 not #315
+[mk-app] #317 ?localinv_
+[mk-app] #318 ?select2 #74 #312 #317
+[mk-app] #319 ?BaseClass_ #309
+[mk-app] #320 = #318 #319
+[mk-app] #321 ?select2 #74 #33 #313
+[mk-app] #322 ?typeof_ #33
+[mk-app] #323 = #321 #322
+[mk-app] #324 not #323
+[mk-app] #325 ?select2 #74 #33 #317
+[mk-app] #326 = #325 #322
+[mk-app] #327 not #326
+[mk-app] #328 or #324 #327
+[mk-app] #329 not #328
+[mk-app] #330 or #308 #311 #316 #320 #329
+[mk-app] #331 pattern #315
+[mk-quant] #332 k!205 2 #331 #330
+[attach-var-names] #332 (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #333 IntsHeap #33
+[mk-app] #334 = #333 #267
+[mk-app] #335 not #334
+[mk-app] #336 ?ClassRepr #74
+[mk-app] #337 ?select2 #33 #336 #278
+[mk-app] #338 = #337 #310
+[mk-app] #339 or #335 #338
+[mk-app] #340 pattern #337
+[mk-quant] #341 k!210 2 #340 #339
+[attach-var-names] #341 (|h| ; |Int|) (|T| ; |Int|)
+[mk-app] #342 ?typeof_ #231
+[mk-app] #343 ?RefArray #80 #74
+[mk-app] #344 ?subtypes #342 #343
+[mk-app] #345 not #344
+[mk-app] #346 ?elements_
+[mk-app] #347 ?select2 #33 #231 #346
+[mk-app] #348 ?RefArrayGet #347 #73
+[mk-app] #349 Ints_ #348 #80
+[mk-app] #350 = #349 #267
+[mk-app] #351 or #335 #345 #350
+[mk-app] #352 pattern #344 #348
+[mk-quant] #353 k!216 5 #352 #351
+[attach-var-names] #353 (|heap| ; |Int|) (|r| ; |Int|) (|i| ; |Int|) (|T| ; |Int|) (|a| ; |Int|)
+[mk-app] #354 = #73 #272
+[mk-app] #355 ?typeof_ #73
+[mk-app] #356 ?RefArray #74 #33
+[mk-app] #357 ?subtypes #355 #356
+[mk-app] #358 not #357
+[mk-app] #359 ?Rank_ #73
+[mk-app] #360 = #359 #33
+[mk-app] #361 or #354 #358 #360
+[mk-app] #362 pattern #357
+[mk-quant] #363 k!222 3 #362 #361
+[attach-var-names] #363 (|r| ; |Int|) (|T| ; |Int|) (|a| ; |Int|)
+[mk-app] #364 ?ValueArray #74 #33
+[mk-app] #365 ?subtypes #73 #364
+[mk-app] #366 not #365
+[mk-app] #367 ?ArrayCategory_ #73
+[mk-app] #368 ?ArrayCategoryValue_
+[mk-app] #369 = #367 #368
+[mk-app] #370 or #366 #369
+[mk-app] #371 pattern #365
+[mk-quant] #372 k!227 3 #371 #370
+[attach-var-names] #372 (|r| ; |Int|) (|ET| ; |Int|) (|T| ; |Int|)
+[mk-app] #373 ?RefArray #73 #74
+[mk-app] #374 ?subtypes #33 #373
+[mk-app] #375 not #374
+[mk-app] #376 ?ElementType_ #33
+[mk-app] #377 ?RefArray #376 #74
+[mk-app] #378 = #33 #377
+[mk-app] #379 not #378
+[mk-app] #380 ?subtypes #376 #73
+[mk-app] #381 not #380
+[mk-app] #382 or #379 #381
+[mk-app] #383 not #382
+[mk-app] #384 or #375 #383
+[mk-app] #385 pattern #374
+[mk-quant] #386 k!234 3 #385 #384
+[attach-var-names] #386 (|T| ; |Int|) (|r| ; |Int|) (|A| ; |Int|)
+[mk-app] #387 ?ValueArray #73 #74
+[mk-app] #388 ?subtypes #33 #387
+[mk-app] #389 not #388
+[mk-app] #390 = #33 #387
+[mk-app] #391 or #389 #390
+[mk-app] #392 pattern #388
+[mk-quant] #393 k!239 3 #392 #391
+[attach-var-names] #393 (|T| ; |Int|) (|r| ; |Int|) (|A| ; |Int|)
+[mk-app] #394 ?AsDirectSubClass #74 #73
+[mk-app] #395 ?subtypes #33 #394
+[mk-app] #396 not #395
+[mk-app] #397 ?OneClassDown #33 #73
+[mk-app] #398 = #397 #74
+[mk-app] #399 or #396 #398
+[mk-app] #400 pattern #395
+[mk-quant] #401 k!244 3 #400 #399
+[attach-var-names] #401 (|C| ; |Int|) (|B| ; |Int|) (|A| ; |Int|)
+[mk-app] #402 Ints_ #74 #33
+[mk-app] #403 = #402 #267
+[mk-app] #404 = #74 #272
+[mk-app] #405 ?typeof_ #74
+[mk-app] #406 ?subtypes #405 #33
+[mk-app] #407 or #404 #406
+[mk-app] #408 = #403 #407
+[mk-app] #409 pattern #402
+[mk-quant] #410 k!250 2 #409 #408
+[attach-var-names] #410 (|T| ; |Int|) (|o| ; |Int|)
+[mk-app] #411 IntsNotNull_ #74 #33
+[mk-app] #412 = #411 #267
+[mk-app] #413 not #403
+[mk-app] #414 or #404 #413
+[mk-app] #415 = #412 #414
+[mk-app] #416 pattern #411
+[mk-quant] #417 k!256 2 #416 #415
+[attach-var-names] #417 (|T| ; |Int|) (|o| ; |Int|)
+[mk-app] #418 = #33 #272
+[mk-app] #419 ?System.Array
+[mk-app] #420 ?subtypes #322 #419
+[mk-app] #421 not #420
+[mk-app] #422 or #308 #418 #421 #329
+[mk-app] #423 pattern #420 #321
+[mk-quant] #424 k!264 2 #423 #422
+[attach-var-names] #424 (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #425 ?AsRangeField #74 #33
+[mk-app] #426 ?select2 #80 #73 #425
+[mk-app] #427 IntnRange #426 #33
+[mk-app] #428 or #269 #427
+[mk-app] #429 pattern #426
+[mk-quant] #430 k!269 4 #429 #428
+[attach-var-names] #430 (|T| ; |Int|) (|f| ; |Int|) (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #431 ?allocated_
+[mk-app] #432 ?select2 #73 #74 #431
+[mk-app] #433 = #432 #267
+[mk-app] #434 not #433
+[mk-app] #435 ?select2 #73 #74 #33
+[mk-app] #436 IntsAllocated #73 #435
+[mk-app] #437 = #436 #267
+[mk-app] #438 or #289 #434 #437
+[mk-app] #439 pattern #436
+[mk-quant] #440 k!276 3 #439 #438
+[attach-var-names] #440 (|f| ; |Int|) (|o| ; |Int|) (|h| ; |Int|)
+[mk-app] #441 IntsAllocated #73 #74
+[mk-app] #442 = #441 #267
+[mk-app] #443 not #442
+[mk-app] #444 ?StructGet_ #74 #33
+[mk-app] #445 IntsAllocated #73 #444
+[mk-app] #446 = #445 #267
+[mk-app] #447 or #443 #446
+[mk-app] #448 pattern #445
+[mk-quant] #449 k!281 3 #448 #447
+[attach-var-names] #449 (|f| ; |Int|) (|s| ; |Int|) (|h| ; |Int|)
+[mk-app] #450 ?isAllocated_ #73 #33
+[mk-app] #451 not #450
+[mk-app] #452 ?isAllocated_ #175 #33
+[mk-app] #453 or #171 #451 #452
+[mk-app] #454 pattern #452
+[mk-quant] #455 k!287 3 #454 #453
+[attach-var-names] #455 (|a0| ; |Int|) (|f| ; |Int|) (|x| ; |Int|)
+[mk-app] #456 ?isAllocated_ #80 #33
+[mk-app] #457 not #456
+[mk-app] #458 ?isAllocated_ #189 #33
+[mk-app] #459 or #184 #457 #458
+[mk-app] #460 pattern #458
+[mk-quant] #461 k!293 4 #460 #459
+[attach-var-names] #461 (|a0| ; |Int|) (|i| ; |Int|) (|e| ; |Int|) (|a| ; |Int|)
+[mk-app] #462 = #162 #267
+[mk-quant] #463 k!298 3 #164 #462
+[attach-var-names] #463 (|i| ; |Int|) (|a| ; |Int|) (|e| ; |Int|)
+[mk-app] #464 ?subtypes #74 #121
+[mk-app] #465 ?subtypes #124 #33
+[mk-app] #466 not #465
+[mk-app] #467 or #127 #466
+[mk-app] #468 not #467
+[mk-app] #469 = #464 #468
+[mk-app] #470 pattern #464
+[mk-quant] #471 k!304 2 #470 #469
+[attach-var-names] #471 (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #472 ?subtypes #73 #107
+[mk-app] #473 not #472
+[mk-app] #474 or #473 #112
+[mk-app] #475 pattern #472
+[mk-quant] #476 k!309 3 #475 #474
+[attach-var-names] #476 (|t2| ; |Int|) (|t1| ; |Int|) (|t0| ; |Int|)
+[mk-app] #477 = #136 #267
+[mk-app] #478 not #477
+[mk-app] #479 or #478 #140
+[mk-quant] #480 k!320 2 #142 #479
+[attach-var-names] #480 (|t| ; |Int|) (|x| ; |Int|)
+[mk-app] #481 ?subtypes #33 #144
+[mk-app] #482 not #481
+[mk-app] #483 ?subtypes #150 #33
+[mk-app] #484 or #149 #483
+[mk-app] #485 = #477 #484
+[mk-app] #486 or #482 #485
+[mk-app] #487 pattern #481 #136
+[mk-quant] #488 k!327 2 #487 #486
+[attach-var-names] #488 (|t| ; |Int|) (|x| ; |Int|)
+[mk-proof] #489 refl #63
+[mk-proof] #489 refl #57
+[mk-proof] #489 refl #60
+[mk-proof] #489 refl #63
+[mk-proof] #489 refl #57
+[mk-proof] #489 refl #60
+[mk-proof] #489 refl #63
+[mk-proof] #489 refl #57
+[mk-proof] #489 refl #60
+[mk-proof] #489 refl #63
+[attach-enode] #24 0
+[attach-enode] #25 0
+[attach-enode] #26 0
+[attach-enode] #27 0
+[assign] #27 justification -1: 
+[attach-enode] #29 0
+[attach-enode] #30 0
+[assign] #30 justification -1: 
+[assign] #51 justification -1: 
+[mk-app] #489 = #51 #1
+[mk-proof] #490 iff-true #72 #489
+[eq-expl] #24 root
+[eq-expl] #25 root
+[eq-expl] #26 lit #27 ; #24
+[new-match] 0x133089ce8 #51 #39 #25 #24 ; #29 (#24 #26)
+[mk-app] #491 pop #26
+[mk-app] #492 + #25 #25
+[mk-app] #493 truncate_by #24 #492
+[mk-app] #494 = #491 #493
+[mk-app] #495 Int
+[attach-meaning] #495 arith 2
+[inst-discovered] theory-solving 0x0 arith# ; #492
+[mk-app] #496 = #492 #495
+[mk-proof] #497 rewrite #496
+[instance] 0x0 #496
+[end-of-instance]
+[mk-app] #498 truncate_by #24 #495
+[mk-app] #499 = #493 #498
+[mk-proof] #500 monotonicity #497 #499
+[mk-app] #501 = #491 #498
+[mk-app] #502 = #494 #501
+[mk-proof] #503 monotonicity #500 #502
+[mk-app] #504 not #51
+[mk-app] #505 or #504 #501
+[mk-app] #506 or #504 #494
+[mk-proof] #507 quant-inst #506
+[mk-app] #508 = #506 #505
+[mk-proof] #509 monotonicity #503 #508
+[mk-app] #510 = #505 #505
+[mk-proof] #511 rewrite #510
+[mk-proof] #512 trans #509 #511 #508
+[mk-proof] #513 mp #507 #512 #505
+[instance] 0x133089ce8 #507 ; 1
+[attach-enode] #491 1
+[attach-enode] #495 1
+[attach-enode] #498 1
+[attach-enode] #501 1
+[assign] #501 justification -1: p3
+[end-of-instance]
+[eq-expl] #495 root
+[eq-expl] #498 lit #501 ; #491
+[eq-expl] #491 cg (#26 #24) ; #29
+[eq-expl] #29 lit #30 ; #24
+[new-match] 0x133089fd8 #51 #39 #495 #24 ; #29 (#24 #498)
+[mk-app] #514 pop #498
+[mk-app] #515 + #25 #495
+[mk-app] #516 truncate_by #24 #515
+[mk-app] #517 = #514 #516
+[mk-app] #518 Int
+[attach-meaning] #518 arith 3
+[inst-discovered] theory-solving 0x0 arith# ; #515
+[mk-app] #519 = #515 #518
+[mk-proof] #520 rewrite #519
+[instance] 0x0 #519
+[end-of-instance]
+[mk-app] #521 truncate_by #24 #518
+[mk-app] #522 = #516 #521
+[mk-proof] #523 monotonicity #520 #522
+[mk-app] #524 = #514 #521
+[mk-app] #525 = #517 #524
+[mk-proof] #526 monotonicity #523 #525
+[mk-app] #527 or #504 #524
+[mk-app] #528 or #504 #517
+[mk-proof] #529 quant-inst #528
+[mk-app] #530 = #528 #527
+[mk-proof] #531 monotonicity #526 #530
+[mk-app] #532 = #527 #527
+[mk-proof] #533 rewrite #532
+[mk-proof] #534 trans #531 #533 #530
+[mk-proof] #535 mp #529 #534 #527
+[instance] 0x133089fd8 #529 ; 2
+[attach-enode] #514 2
+[attach-enode] #518 2
+[attach-enode] #521 2
+[attach-enode] #524 2
+[assign] #524 justification -1: p3
+[end-of-instance]
+[eq-expl] #518 root
+[eq-expl] #521 lit #524 ; #514
+[eq-expl] #514 cg (#498 #24) ; #29
+[new-match] 0x13308a2c8 #51 #39 #518 #24 ; #29 (#24 #521)
+[mk-app] #536 pop #521
+[mk-app] #537 + #25 #518
+[mk-app] #538 truncate_by #24 #537
+[mk-app] #539 = #536 #538
+[mk-app] #540 Int
+[attach-meaning] #540 arith 4
+[inst-discovered] theory-solving 0x0 arith# ; #537
+[mk-app] #541 = #537 #540
+[mk-proof] #542 rewrite #541
+[instance] 0x0 #541
+[end-of-instance]
+[mk-app] #543 truncate_by #24 #540
+[mk-app] #544 = #538 #543
+[mk-proof] #545 monotonicity #542 #544
+[mk-app] #546 = #536 #543
+[mk-app] #547 = #539 #546
+[mk-proof] #548 monotonicity #545 #547
+[mk-app] #549 or #504 #546
+[mk-app] #550 or #504 #539
+[mk-proof] #551 quant-inst #550
+[mk-app] #552 = #550 #549
+[mk-proof] #553 monotonicity #548 #552
+[mk-app] #554 = #549 #549
+[mk-proof] #555 rewrite #554
+[mk-proof] #556 trans #553 #555 #552
+[mk-proof] #557 mp #551 #556 #549
+[instance] 0x13308a2c8 #551 ; 3
+[attach-enode] #536 3
+[attach-enode] #540 3
+[attach-enode] #543 3
+[attach-enode] #546 3
+[assign] #546 justification -1: p3
+[end-of-instance]
+[eq-expl] #540 root
+[eq-expl] #543 lit #546 ; #536
+[eq-expl] #536 cg (#521 #24) ; #29
+[new-match] 0x13308a5b8 #51 #39 #540 #24 ; #29 (#24 #543)
+[mk-app] #558 pop #543
+[mk-app] #559 + #25 #540
+[mk-app] #560 truncate_by #24 #559
+[mk-app] #561 = #558 #560
+[mk-app] #562 Int
+[attach-meaning] #562 arith 5
+[inst-discovered] theory-solving 0x0 arith# ; #559
+[mk-app] #563 = #559 #562
+[mk-proof] #564 rewrite #563
+[instance] 0x0 #563
+[end-of-instance]
+[mk-app] #565 truncate_by #24 #562
+[mk-app] #566 = #560 #565
+[mk-proof] #567 monotonicity #564 #566
+[mk-app] #568 = #558 #565
+[mk-app] #569 = #561 #568
+[mk-proof] #570 monotonicity #567 #569
+[mk-app] #571 or #504 #568
+[mk-app] #572 or #504 #561
+[mk-proof] #573 quant-inst #572
+[mk-app] #574 = #572 #571
+[mk-proof] #575 monotonicity #570 #574
+[mk-app] #576 = #571 #571
+[mk-proof] #577 rewrite #576
+[mk-proof] #578 trans #575 #577 #574
+[mk-proof] #579 mp #573 #578 #571
+[instance] 0x13308a5b8 #573 ; 4
+[attach-enode] #558 4
+[attach-enode] #562 4
+[attach-enode] #565 4
+[attach-enode] #568 4
+[assign] #568 justification -1: p3
+[end-of-instance]
+[eq-expl] #562 root
+[eq-expl] #565 lit #568 ; #558
+[eq-expl] #558 cg (#543 #24) ; #29
+[new-match] 0x13308a8a8 #51 #39 #562 #24 ; #29 (#24 #565)
+[mk-app] #580 pop #565
+[mk-app] #581 + #25 #562
+[mk-app] #582 truncate_by #24 #581
+[mk-app] #583 = #580 #582
+[mk-app] #584 Int
+[attach-meaning] #584 arith 6
+[inst-discovered] theory-solving 0x0 arith# ; #581
+[mk-app] #585 = #581 #584
+[mk-proof] #586 rewrite #585
+[instance] 0x0 #585
+[end-of-instance]
+[mk-app] #587 truncate_by #24 #584
+[mk-app] #588 = #582 #587
+[mk-proof] #589 monotonicity #586 #588
+[mk-app] #590 = #580 #587
+[mk-app] #591 = #583 #590
+[mk-proof] #592 monotonicity #589 #591
+[mk-app] #593 or #504 #590
+[mk-app] #594 or #504 #583
+[mk-proof] #595 quant-inst #594
+[mk-app] #596 = #594 #593
+[mk-proof] #597 monotonicity #592 #596
+[mk-app] #598 = #593 #593
+[mk-proof] #599 rewrite #598
+[mk-proof] #600 trans #597 #599 #596
+[mk-proof] #601 mp #595 #600 #593
+[instance] 0x13308a8a8 #595 ; 5
+[attach-enode] #580 5
+[attach-enode] #584 5
+[attach-enode] #587 5
+[attach-enode] #590 5
+[assign] #590 justification -1: p3
+[end-of-instance]
+[eq-expl] #584 root
+[eq-expl] #587 lit #590 ; #580
+[eq-expl] #580 cg (#565 #24) ; #29
+[new-match] 0x13308ab98 #51 #39 #584 #24 ; #29 (#24 #587)
+[mk-app] #602 pop #587
+[mk-app] #603 + #25 #584
+[mk-app] #604 truncate_by #24 #603
+[mk-app] #605 = #602 #604
+[mk-app] #606 Int
+[attach-meaning] #606 arith 7
+[inst-discovered] theory-solving 0x0 arith# ; #603
+[mk-app] #607 = #603 #606
+[mk-proof] #608 rewrite #607
+[instance] 0x0 #607
+[end-of-instance]
+[mk-app] #609 truncate_by #24 #606
+[mk-app] #610 = #604 #609
+[mk-proof] #611 monotonicity #608 #610
+[mk-app] #612 = #602 #609
+[mk-app] #613 = #605 #612
+[mk-proof] #614 monotonicity #611 #613
+[mk-app] #615 or #504 #612
+[mk-app] #616 or #504 #605
+[mk-proof] #617 quant-inst #616
+[mk-app] #618 = #616 #615
+[mk-proof] #619 monotonicity #614 #618
+[mk-app] #620 = #615 #615
+[mk-proof] #621 rewrite #620
+[mk-proof] #622 trans #619 #621 #618
+[mk-proof] #623 mp #617 #622 #615
+[instance] 0x13308ab98 #617 ; 6
+[attach-enode] #602 6
+[attach-enode] #606 6
+[attach-enode] #609 6
+[attach-enode] #612 6
+[assign] #612 justification -1: p3
+[end-of-instance]
+[eq-expl] #606 root
+[eq-expl] #609 lit #612 ; #602
+[eq-expl] #602 cg (#587 #24) ; #29
+[new-match] 0x13308ae88 #51 #39 #606 #24 ; #29 (#24 #609)
+[mk-app] #624 pop #609
+[mk-app] #625 + #25 #606
+[mk-app] #626 truncate_by #24 #625
+[mk-app] #627 = #624 #626
+[mk-app] #628 Int
+[attach-meaning] #628 arith 8
+[inst-discovered] theory-solving 0x0 arith# ; #625
+[mk-app] #629 = #625 #628
+[mk-proof] #630 rewrite #629
+[instance] 0x0 #629
+[end-of-instance]
+[mk-app] #631 truncate_by #24 #628
+[mk-app] #632 = #626 #631
+[mk-proof] #633 monotonicity #630 #632
+[mk-app] #634 = #624 #631
+[mk-app] #635 = #627 #634
+[mk-proof] #636 monotonicity #633 #635
+[mk-app] #637 or #504 #634
+[mk-app] #638 or #504 #627
+[mk-proof] #639 quant-inst #638
+[mk-app] #640 = #638 #637
+[mk-proof] #641 monotonicity #636 #640
+[mk-app] #642 = #637 #637
+[mk-proof] #643 rewrite #642
+[mk-proof] #644 trans #641 #643 #640
+[mk-proof] #645 mp #639 #644 #637
+[instance] 0x13308ae88 #639 ; 7
+[attach-enode] #624 7
+[attach-enode] #628 7
+[attach-enode] #631 7
+[attach-enode] #634 7
+[assign] #634 justification -1: p3
+[end-of-instance]
+[eq-expl] #628 root
+[eq-expl] #631 lit #634 ; #624
+[eq-expl] #624 cg (#609 #24) ; #29
+[new-match] 0x13308b178 #51 #39 #628 #24 ; #29 (#24 #631)
+[mk-app] #646 pop #631
+[mk-app] #647 + #25 #628
+[mk-app] #648 truncate_by #24 #647
+[mk-app] #649 = #646 #648
+[mk-app] #650 Int
+[attach-meaning] #650 arith 9
+[inst-discovered] theory-solving 0x0 arith# ; #647
+[mk-app] #651 = #647 #650
+[mk-proof] #652 rewrite #651
+[instance] 0x0 #651
+[end-of-instance]
+[mk-app] #653 truncate_by #24 #650
+[mk-app] #654 = #648 #653
+[mk-proof] #655 monotonicity #652 #654
+[mk-app] #656 = #646 #653
+[mk-app] #657 = #649 #656
+[mk-proof] #658 monotonicity #655 #657
+[mk-app] #659 or #504 #656
+[mk-app] #660 or #504 #649
+[mk-proof] #661 quant-inst #660
+[mk-app] #662 = #660 #659
+[mk-proof] #663 monotonicity #658 #662
+[mk-app] #664 = #659 #659
+[mk-proof] #665 rewrite #664
+[mk-proof] #666 trans #663 #665 #662
+[mk-proof] #667 mp #661 #666 #659
+[instance] 0x13308b178 #661 ; 8
+[attach-enode] #646 8
+[attach-enode] #650 8
+[attach-enode] #653 8
+[attach-enode] #656 8
+[assign] #656 justification -1: p3
+[end-of-instance]
+[eq-expl] #650 root
+[eq-expl] #653 lit #656 ; #646
+[eq-expl] #646 cg (#631 #24) ; #29
+[new-match] 0x13308b468 #51 #39 #650 #24 ; #29 (#24 #653)
+[mk-app] #668 pop #653
+[mk-app] #669 + #25 #650
+[mk-app] #670 truncate_by #24 #669
+[mk-app] #671 = #668 #670
+[mk-app] #672 Int
+[attach-meaning] #672 arith 10
+[inst-discovered] theory-solving 0x0 arith# ; #669
+[mk-app] #673 = #669 #672
+[mk-proof] #674 rewrite #673
+[instance] 0x0 #673
+[end-of-instance]
+[mk-app] #675 truncate_by #24 #672
+[mk-app] #676 = #670 #675
+[mk-proof] #677 monotonicity #674 #676
+[mk-app] #678 = #668 #675
+[mk-app] #679 = #671 #678
+[mk-proof] #680 monotonicity #677 #679
+[mk-app] #681 or #504 #678
+[mk-app] #682 or #504 #671
+[mk-proof] #683 quant-inst #682
+[mk-app] #684 = #682 #681
+[mk-proof] #685 monotonicity #680 #684
+[mk-app] #686 = #681 #681
+[mk-proof] #687 rewrite #686
+[mk-proof] #688 trans #685 #687 #684
+[mk-proof] #689 mp #683 #688 #681
+[instance] 0x13308b468 #683 ; 9
+[attach-enode] #668 9
+[attach-enode] #672 9
+[attach-enode] #675 9
+[attach-enode] #678 9
+[assign] #678 justification -1: p3
+[end-of-instance]
+[eq-expl] #672 root
+[eq-expl] #675 lit #678 ; #668
+[eq-expl] #668 cg (#653 #24) ; #29
+[new-match] 0x13308b758 #51 #39 #672 #24 ; #29 (#24 #675)
+[mk-app] #690 pop #675
+[mk-app] #691 + #25 #672
+[mk-app] #692 truncate_by #24 #691
+[mk-app] #693 = #690 #692
+[mk-app] #694 Int
+[attach-meaning] #694 arith 11
+[inst-discovered] theory-solving 0x0 arith# ; #691
+[mk-app] #695 = #691 #694
+[mk-proof] #696 rewrite #695
+[instance] 0x0 #695
+[end-of-instance]
+[mk-app] #697 truncate_by #24 #694
+[mk-app] #698 = #692 #697
+[mk-proof] #699 monotonicity #696 #698
+[mk-app] #700 = #690 #697
+[mk-app] #701 = #693 #700
+[mk-proof] #702 monotonicity #699 #701
+[mk-app] #703 or #504 #700
+[mk-app] #704 or #504 #693
+[mk-proof] #705 quant-inst #704
+[mk-app] #706 = #704 #703
+[mk-proof] #707 monotonicity #702 #706
+[mk-app] #708 = #703 #703
+[mk-proof] #709 rewrite #708
+[mk-proof] #710 trans #707 #709 #706
+[mk-proof] #711 mp #705 #710 #703
+[instance] 0x13308b758 #705 ; 10
+[attach-enode] #690 10
+[attach-enode] #694 10
+[attach-enode] #697 10
+[attach-enode] #700 10
+[assign] #700 justification -1: p3
+[end-of-instance]
+[eq-expl] #694 root
+[eq-expl] #697 lit #700 ; #690
+[eq-expl] #690 cg (#675 #24) ; #29
+[new-match] 0x133128cc8 #51 #39 #694 #24 ; #29 (#24 #697)
+[mk-app] #712 pop #697
+[mk-app] #713 + #25 #694
+[mk-app] #714 truncate_by #24 #713
+[mk-app] #715 = #712 #714
+[mk-app] #716 Int
+[attach-meaning] #716 arith 12
+[inst-discovered] theory-solving 0x0 arith# ; #713
+[mk-app] #717 = #713 #716
+[mk-proof] #718 rewrite #717
+[instance] 0x0 #717
+[end-of-instance]
+[mk-app] #719 truncate_by #24 #716
+[mk-app] #720 = #714 #719
+[mk-proof] #721 monotonicity #718 #720
+[mk-app] #722 = #712 #719
+[mk-app] #723 = #715 #722
+[mk-proof] #724 monotonicity #721 #723
+[mk-app] #725 or #504 #722
+[mk-app] #726 or #504 #715
+[mk-proof] #727 quant-inst #726
+[mk-app] #728 = #726 #725
+[mk-proof] #729 monotonicity #724 #728
+[mk-app] #730 = #725 #725
+[mk-proof] #731 rewrite #730
+[mk-proof] #732 trans #729 #731 #728
+[mk-proof] #733 mp #727 #732 #725
+[instance] 0x133128cc8 #727 ; 11
+[attach-enode] #712 11
+[attach-enode] #716 11
+[attach-enode] #719 11
+[attach-enode] #722 11
+[assign] #722 justification -1: p3
+[end-of-instance]
+[eq-expl] #716 root
+[eq-expl] #719 lit #722 ; #712
+[eq-expl] #712 cg (#697 #24) ; #29
+[new-match] 0x133128fe8 #51 #39 #716 #24 ; #29 (#24 #719)
+[mk-app] #734 pop #719
+[mk-app] #735 + #25 #716
+[mk-app] #736 truncate_by #24 #735
+[mk-app] #737 = #734 #736
+[mk-app] #738 Int
+[attach-meaning] #738 arith 13
+[inst-discovered] theory-solving 0x0 arith# ; #735
+[mk-app] #739 = #735 #738
+[mk-proof] #740 rewrite #739
+[instance] 0x0 #739
+[end-of-instance]
+[mk-app] #741 truncate_by #24 #738
+[mk-app] #742 = #736 #741
+[mk-proof] #743 monotonicity #740 #742
+[mk-app] #744 = #734 #741
+[mk-app] #745 = #737 #744
+[mk-proof] #746 monotonicity #743 #745
+[mk-app] #747 or #504 #744
+[mk-app] #748 or #504 #737
+[mk-proof] #749 quant-inst #748
+[mk-app] #750 = #748 #747
+[mk-proof] #751 monotonicity #746 #750
+[mk-app] #752 = #747 #747
+[mk-proof] #753 rewrite #752
+[mk-proof] #754 trans #751 #753 #750
+[mk-proof] #755 mp #749 #754 #747
+[instance] 0x133128fe8 #749 ; 12
+[attach-enode] #734 12
+[attach-enode] #738 12
+[attach-enode] #741 12
+[attach-enode] #744 12
+[assign] #744 justification -1: p3
+[end-of-instance]
+[eq-expl] #738 root
+[eq-expl] #741 lit #744 ; #734
+[eq-expl] #734 cg (#719 #24) ; #29
+[new-match] 0x133129308 #51 #39 #738 #24 ; #29 (#24 #741)
+[mk-app] #756 pop #741
+[mk-app] #757 + #25 #738
+[mk-app] #758 truncate_by #24 #757
+[mk-app] #759 = #756 #758
+[mk-app] #760 Int
+[attach-meaning] #760 arith 14
+[inst-discovered] theory-solving 0x0 arith# ; #757
+[mk-app] #761 = #757 #760
+[mk-proof] #762 rewrite #761
+[instance] 0x0 #761
+[end-of-instance]
+[mk-app] #763 truncate_by #24 #760
+[mk-app] #764 = #758 #763
+[mk-proof] #765 monotonicity #762 #764
+[mk-app] #766 = #756 #763
+[mk-app] #767 = #759 #766
+[mk-proof] #768 monotonicity #765 #767
+[mk-app] #769 or #504 #766
+[mk-app] #770 or #504 #759
+[mk-proof] #771 quant-inst #770
+[mk-app] #772 = #770 #769
+[mk-proof] #773 monotonicity #768 #772
+[mk-app] #774 = #769 #769
+[mk-proof] #775 rewrite #774
+[mk-proof] #776 trans #773 #775 #772
+[mk-proof] #777 mp #771 #776 #769
+[instance] 0x133129308 #771 ; 13
+[attach-enode] #756 13
+[attach-enode] #760 13
+[attach-enode] #763 13
+[attach-enode] #766 13
+[assign] #766 justification -1: p3
+[end-of-instance]
+[eq-expl] #760 root
+[eq-expl] #763 lit #766 ; #756
+[eq-expl] #756 cg (#741 #24) ; #29
+[new-match] 0x133129610 #51 #39 #760 #24 ; #29 (#24 #763)
+[mk-app] #778 pop #763
+[mk-app] #779 + #25 #760
+[mk-app] #780 truncate_by #24 #779
+[mk-app] #781 = #778 #780
+[mk-app] #782 Int
+[attach-meaning] #782 arith 15
+[inst-discovered] theory-solving 0x0 arith# ; #779
+[mk-app] #783 = #779 #782
+[mk-proof] #784 rewrite #783
+[instance] 0x0 #783
+[end-of-instance]
+[mk-app] #785 truncate_by #24 #782
+[mk-app] #786 = #780 #785
+[mk-proof] #787 monotonicity #784 #786
+[mk-app] #788 = #778 #785
+[mk-app] #789 = #781 #788
+[mk-proof] #790 monotonicity #787 #789
+[mk-app] #791 or #504 #788
+[mk-app] #792 or #504 #781
+[mk-proof] #793 quant-inst #792
+[mk-app] #794 = #792 #791
+[mk-proof] #795 monotonicity #790 #794
+[mk-app] #796 = #791 #791
+[mk-proof] #797 rewrite #796
+[mk-proof] #798 trans #795 #797 #794
+[mk-proof] #799 mp #793 #798 #791
+[instance] 0x133129610 #793 ; 14
+[attach-enode] #778 14
+[attach-enode] #782 14
+[attach-enode] #785 14
+[attach-enode] #788 14
+[assign] #788 justification -1: p3
+[end-of-instance]
+[eq-expl] #782 root
+[eq-expl] #785 lit #788 ; #778
+[eq-expl] #778 cg (#763 #24) ; #29
+[new-match] 0x133129918 #51 #39 #782 #24 ; #29 (#24 #785)
+[mk-app] #800 pop #785
+[mk-app] #801 + #25 #782
+[mk-app] #802 truncate_by #24 #801
+[mk-app] #803 = #800 #802
+[mk-app] #804 Int
+[attach-meaning] #804 arith 16
+[inst-discovered] theory-solving 0x0 arith# ; #801
+[mk-app] #805 = #801 #804
+[mk-proof] #806 rewrite #805
+[instance] 0x0 #805
+[end-of-instance]
+[mk-app] #807 truncate_by #24 #804
+[mk-app] #808 = #802 #807
+[mk-proof] #809 monotonicity #806 #808
+[mk-app] #810 = #800 #807
+[mk-app] #811 = #803 #810
+[mk-proof] #812 monotonicity #809 #811
+[mk-app] #813 or #504 #810
+[mk-app] #814 or #504 #803
+[mk-proof] #815 quant-inst #814
+[mk-app] #816 = #814 #813
+[mk-proof] #817 monotonicity #812 #816
+[mk-app] #818 = #813 #813
+[mk-proof] #819 rewrite #818
+[mk-proof] #820 trans #817 #819 #816
+[mk-proof] #821 mp #815 #820 #813
+[instance] 0x133129918 #815 ; 15
+[attach-enode] #800 15
+[attach-enode] #804 15
+[attach-enode] #807 15
+[attach-enode] #810 15
+[assign] #810 justification -1: p3
+[end-of-instance]
+[eq-expl] #804 root
+[eq-expl] #807 lit #810 ; #800
+[eq-expl] #800 cg (#785 #24) ; #29
+[new-match] 0x133129c20 #51 #39 #804 #24 ; #29 (#24 #807)
+[mk-app] #822 pop #807
+[mk-app] #823 + #25 #804
+[mk-app] #824 truncate_by #24 #823
+[mk-app] #825 = #822 #824
+[mk-app] #826 Int
+[attach-meaning] #826 arith 17
+[inst-discovered] theory-solving 0x0 arith# ; #823
+[mk-app] #827 = #823 #826
+[mk-proof] #828 rewrite #827
+[instance] 0x0 #827
+[end-of-instance]
+[mk-app] #829 truncate_by #24 #826
+[mk-app] #830 = #824 #829
+[mk-proof] #831 monotonicity #828 #830
+[mk-app] #832 = #822 #829
+[mk-app] #833 = #825 #832
+[mk-proof] #834 monotonicity #831 #833
+[mk-app] #835 or #504 #832
+[mk-app] #836 or #504 #825
+[mk-proof] #837 quant-inst #836
+[mk-app] #838 = #836 #835
+[mk-proof] #839 monotonicity #834 #838
+[mk-app] #840 = #835 #835
+[mk-proof] #841 rewrite #840
+[mk-proof] #842 trans #839 #841 #838
+[mk-proof] #843 mp #837 #842 #835
+[instance] 0x133129c20 #837 ; 16
+[attach-enode] #822 16
+[attach-enode] #826 16
+[attach-enode] #829 16
+[attach-enode] #832 16
+[assign] #832 justification -1: p3
+[end-of-instance]
+[eq-expl] #826 root
+[eq-expl] #829 lit #832 ; #822
+[eq-expl] #822 cg (#807 #24) ; #29
+[new-match] 0x133129f28 #51 #39 #826 #24 ; #29 (#24 #829)
+[mk-app] #844 pop #829
+[mk-app] #845 + #25 #826
+[mk-app] #846 truncate_by #24 #845
+[mk-app] #847 = #844 #846
+[mk-app] #848 Int
+[attach-meaning] #848 arith 18
+[inst-discovered] theory-solving 0x0 arith# ; #845
+[mk-app] #849 = #845 #848
+[mk-proof] #850 rewrite #849
+[instance] 0x0 #849
+[end-of-instance]
+[mk-app] #851 truncate_by #24 #848
+[mk-app] #852 = #846 #851
+[mk-proof] #853 monotonicity #850 #852
+[mk-app] #854 = #844 #851
+[mk-app] #855 = #847 #854
+[mk-proof] #856 monotonicity #853 #855
+[mk-app] #857 or #504 #854
+[mk-app] #858 or #504 #847
+[mk-proof] #859 quant-inst #858
+[mk-app] #860 = #858 #857
+[mk-proof] #861 monotonicity #856 #860
+[mk-app] #862 = #857 #857
+[mk-proof] #863 rewrite #862
+[mk-proof] #864 trans #861 #863 #860
+[mk-proof] #865 mp #859 #864 #857
+[instance] 0x133129f28 #859 ; 17
+[attach-enode] #844 17
+[attach-enode] #848 17
+[attach-enode] #851 17
+[attach-enode] #854 17
+[assign] #854 justification -1: p3
+[end-of-instance]
+[eq-expl] #848 root
+[eq-expl] #851 lit #854 ; #844
+[eq-expl] #844 cg (#829 #24) ; #29
+[new-match] 0x13312a230 #51 #39 #848 #24 ; #29 (#24 #851)
+[mk-app] #866 pop #851
+[mk-app] #867 + #25 #848
+[mk-app] #868 truncate_by #24 #867
+[mk-app] #869 = #866 #868
+[mk-app] #870 Int
+[attach-meaning] #870 arith 19
+[inst-discovered] theory-solving 0x0 arith# ; #867
+[mk-app] #871 = #867 #870
+[mk-proof] #872 rewrite #871
+[instance] 0x0 #871
+[end-of-instance]
+[mk-app] #873 truncate_by #24 #870
+[mk-app] #874 = #868 #873
+[mk-proof] #875 monotonicity #872 #874
+[mk-app] #876 = #866 #873
+[mk-app] #877 = #869 #876
+[mk-proof] #878 monotonicity #875 #877
+[mk-app] #879 or #504 #876
+[mk-app] #880 or #504 #869
+[mk-proof] #881 quant-inst #880
+[mk-app] #882 = #880 #879
+[mk-proof] #883 monotonicity #878 #882
+[mk-app] #884 = #879 #879
+[mk-proof] #885 rewrite #884
+[mk-proof] #886 trans #883 #885 #882
+[mk-proof] #887 mp #881 #886 #879
+[instance] 0x13312a230 #881 ; 18
+[attach-enode] #866 18
+[attach-enode] #870 18
+[attach-enode] #873 18
+[attach-enode] #876 18
+[assign] #876 justification -1: p3
+[end-of-instance]
+[eq-expl] #870 root
+[eq-expl] #873 lit #876 ; #866
+[eq-expl] #866 cg (#851 #24) ; #29
+[new-match] 0x13312a538 #51 #39 #870 #24 ; #29 (#24 #873)
+[mk-app] #888 pop #873
+[mk-app] #889 + #25 #870
+[mk-app] #890 truncate_by #24 #889
+[mk-app] #891 = #888 #890
+[mk-app] #892 Int
+[attach-meaning] #892 arith 20
+[inst-discovered] theory-solving 0x0 arith# ; #889
+[mk-app] #893 = #889 #892
+[mk-proof] #894 rewrite #893
+[instance] 0x0 #893
+[end-of-instance]
+[mk-app] #895 truncate_by #24 #892
+[mk-app] #896 = #890 #895
+[mk-proof] #897 monotonicity #894 #896
+[mk-app] #898 = #888 #895
+[mk-app] #899 = #891 #898
+[mk-proof] #900 monotonicity #897 #899
+[mk-app] #901 or #504 #898
+[mk-app] #902 or #504 #891
+[mk-proof] #903 quant-inst #902
+[mk-app] #904 = #902 #901
+[mk-proof] #905 monotonicity #900 #904
+[mk-app] #906 = #901 #901
+[mk-proof] #907 rewrite #906
+[mk-proof] #908 trans #905 #907 #904
+[mk-proof] #909 mp #903 #908 #901
+[instance] 0x13312a538 #903 ; 19
+[attach-enode] #888 19
+[attach-enode] #892 19
+[attach-enode] #895 19
+[attach-enode] #898 19
+[assign] #898 justification -1: p3
+[end-of-instance]
+[eq-expl] #892 root
+[eq-expl] #895 lit #898 ; #888
+[eq-expl] #888 cg (#873 #24) ; #29
+[new-match] 0x13312a840 #51 #39 #892 #24 ; #29 (#24 #895)
+[mk-app] #910 pop #895
+[mk-app] #911 + #25 #892
+[mk-app] #912 truncate_by #24 #911
+[mk-app] #913 = #910 #912
+[mk-app] #914 Int
+[attach-meaning] #914 arith 21
+[inst-discovered] theory-solving 0x0 arith# ; #911
+[mk-app] #915 = #911 #914
+[mk-proof] #916 rewrite #915
+[instance] 0x0 #915
+[end-of-instance]
+[mk-app] #917 truncate_by #24 #914
+[mk-app] #918 = #912 #917
+[mk-proof] #919 monotonicity #916 #918
+[mk-app] #920 = #910 #917
+[mk-app] #921 = #913 #920
+[mk-proof] #922 monotonicity #919 #921
+[mk-app] #923 or #504 #920
+[mk-app] #924 or #504 #913
+[mk-proof] #925 quant-inst #924
+[mk-app] #926 = #924 #923
+[mk-proof] #927 monotonicity #922 #926
+[mk-app] #928 = #923 #923
+[mk-proof] #929 rewrite #928
+[mk-proof] #930 trans #927 #929 #926
+[mk-proof] #931 mp #925 #930 #923
+[instance] 0x13312a840 #925 ; 20
+[attach-enode] #910 20
+[attach-enode] #914 20
+[attach-enode] #917 20
+[attach-enode] #920 20
+[assign] #920 justification -1: p3
+[end-of-instance]
+[eq-expl] #914 root
+[eq-expl] #917 lit #920 ; #910
+[eq-expl] #910 cg (#895 #24) ; #29
+[new-match] 0x1331387b8 #51 #39 #914 #24 ; #29 (#24 #917)
+[mk-app] #932 Vec!val!0
+[attach-meaning] #804 arith 16
+[attach-meaning] #826 arith 17
+[attach-meaning] #848 arith 18
+[attach-meaning] #870 arith 19
+[attach-meaning] #892 arith 20
+[attach-meaning] #914 arith 21
+[mk-app] #933 Int
+[attach-meaning] #933 arith (- 1)
+[mk-app] #934 * #933 #25
+[mk-app] #935 + #25 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #936 + #495 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #937 + #518 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #938 + #540 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #939 + #562 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #940 + #584 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #941 + #606 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #942 + #628 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #943 + #650 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #944 + #672 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #945 + #694 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #946 + #716 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #947 + #738 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #948 + #760 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #949 + #782 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #950 + #804 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #951 + #826 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #952 + #848 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #953 + #870 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #954 + #892 #934
+[attach-meaning] #933 arith (- 1)
+[mk-app] #955 + #914 #934
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #933 arith (- 1)
+[attach-meaning] #870 arith 19
+[attach-meaning] #892 arith 20
+[attach-meaning] #804 arith 16
+[attach-meaning] #848 arith 18
+[attach-meaning] #826 arith 17
+[attach-meaning] #870 arith 19
+[attach-meaning] #892 arith 20
+[attach-meaning] #804 arith 16
+[attach-meaning] #848 arith 18
+[attach-meaning] #826 arith 17
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[mk-app] #956 k!2
+[mk-app] #957 k!3
+[mk-app] #958 = #957 #932
+[mk-app] #959 or #958
+[mk-proof] #960 asserted #959
+[inst-discovered] theory-solving 0x0 basic# ; #959
+[mk-app] #961 = #959 #958
+[mk-proof] #962 rewrite #961
+[instance] 0x0 #961
+[end-of-instance]
+[mk-proof] #963 mp #960 #962 #958
+[mk-app] #964 not #1
+[mk-proof] #965 asserted #964
+[inst-discovered] theory-solving 0x0 basic# ; #964
+[mk-app] #966 = #964 #2
+[mk-proof] #967 rewrite #966
+[instance] 0x0 #966
+[end-of-instance]
+[mk-proof] #968 mp #965 #967 #2
+[attach-meaning] #5 bv #b1
+[attach-meaning] #6 bv #b0
+[attach-meaning] #5 bv #b1
+[attach-meaning] #6 bv #b0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #5 bv #b1
+[attach-meaning] #6 bv #b0
+[attach-meaning] #5 bv #b1
+[attach-meaning] #6 bv #b0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[attach-meaning] #6 bv #b0
+[attach-enode] #1 0
+[attach-enode] #2 0
+[eof]
