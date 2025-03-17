@@ -1,0 +1,40 @@
+domain Ptr32 {
+    function offset(Ref, Int): Ptr32
+    function next(Ptr32): Ptr32
+    function address(Ptr32): Int
+
+    function offset_inj(Ptr32, Ref): Int
+
+    axiom inj {
+        forall a: Ref, i: Int :: { offset(a, i) } offset_inj(offset(a, i), a) == i
+    }
+    axiom next_offset {
+        forall a: Ref, i: Int :: { next(offset(a, i)) } next(offset(a, i)) == offset(a, i + 1)
+    }
+    axiom addr {
+        forall a: Ref, i: Int :: { address(offset(a, i)) } address(next(offset(a, i))) == address(offset(a, i)) + 4
+    }
+}
+
+field seq: Seq[Int]
+
+method bar(x: Ref)
+    requires acc(x.seq)
+    ensures acc(x.seq)
+    ensures |x.seq| == |old(x.seq)| + 1
+{
+    var idx_zero: Ptr32 := offset(x, 0)
+    var idx_one: Ptr32 := next(idx_zero)
+
+    assert idx_zero != idx_one
+    x.seq := x.seq ++ Seq(0)
+
+    define aligned(p) (address(p) % 4 == 0)
+    if (aligned(idx_zero)) {
+        assert address(idx_one) % 2 == 0
+
+        if (!aligned(idx_one)) {
+            x.seq := x.seq ++ Seq(1)
+        }
+    }
+}
