@@ -1,0 +1,81 @@
+name: Continuous integration
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Cargo install smt-scope (cached)
+      uses: baptiste0928/cargo-install@v3.3.0
+      with:
+        crate: smt-scope
+
+    - name: Checkout silicon
+      uses: actions/checkout@v4
+      with:
+        repository: viperproject/silicon
+        path: viper_tools/silicon
+        submodules: true
+    - name: Checkout carbon
+      uses: actions/checkout@v4
+      with:
+        repository: viperproject/carbon
+        path: viper_tools/carbon
+        submodules: true
+
+    - name: Setup JDK (cache)
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: 11
+        cache: sbt
+    - name: Setup sbt launcher
+      uses: sbt/setup-sbt@v1
+
+    - name: Cache silicon/carbon
+      uses: actions/cache@v4
+      with:
+        path: |
+          viper_tools/silicon/target
+          viper_tools/silicon/silver/target
+          viper_tools/carbon/target
+          viper_tools/carbon/silver/target
+        key: ${{ runner.os }}-target-${{ hashFiles('**/build.sbt') }}
+
+    - name: Build silicon
+      working-directory: viper_tools/silicon
+      run: sbt assembly
+    - name: Build carbon
+      working-directory: viper_tools/carbon
+      run: sbt assembly
+
+    # - uses: coursier/cache-action@v6
+
+    - name: Install Z3 v4.8.7
+      uses: pavpanchekha/setup-z3@1.2.2
+      with:
+        version: 4.8.7
+
+    - name: Verify with silicon
+      run: |
+        export Z3_EXE="$(which z3-scope)"
+        java -Xss1024m -Xmx4024m -jar viper_tools/silicon/target/scala-2.13/silicon.jar viper/versions/a_running-example.vpr
+        java -Xss1024m -Xmx4024m -jar viper_tools/silicon/target/scala-2.13/silicon.jar viper/versions/b_running-example.vpr
+        java -Xss1024m -Xmx4024m -jar viper_tools/silicon/target/scala-2.13/silicon.jar viper/versions/c_running-example.vpr
+        java -Xss1024m -Xmx4024m -jar viper_tools/silicon/target/scala-2.13/silicon.jar viper/versions/d_running-example.vpr
+
+    # - name: Debugging with tmate
+    #   uses: mxschmitt/action-tmate@v3.19
+
+    #   https://github.com/viperproject/silicon/actions/runs/13895765664/artifacts/2763237628
+    # - run: wget https://github.com/viperproject/viperserver/releases/latest/download/viperserver.jar
+
+    # - run: Z3_EXE=viper_tools/z3/bin/z3 java -Xss1024m -Xmx4024m -jar viper_tools/backends/viperserver.jar
+
+    # java -Xss1024m -Xmx4024m -jar viper_tools/silicon/target/scala-2.13/silicon.jar
