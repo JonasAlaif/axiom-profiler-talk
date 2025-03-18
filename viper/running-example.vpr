@@ -4,28 +4,28 @@ domain Ptr32 {
     function address(Ptr32): Int
 
     axiom next_offset {
-        forall a: Ref, i: Int :: { offset(a, i) } next(offset(a, i)) == offset(a, i + 1)
+        forall r: Ref, i: Int :: { offset(r, i) } next(offset(r, i)) == offset(r, i + 1)
     }
     axiom inj {
-        forall a: Ref, i: Int, j: Int :: i != j <==> offset(a, i) != offset(a, j)
+        forall r: Ref, i: Int, j: Int :: i != j <==> offset(r, i) != offset(r, j)
     }
     axiom addr {
-        forall a: Ref, i: Int :: address(next(offset(a, i))) == address(offset(a, i)) + 4
+        forall r: Ref, i: Int :: address(next(offset(r, i))) == address(offset(r, i)) + 4
     }
 }
 
 field seq: Seq[Int]
 
-method bar(x: Ref)
-    requires acc(x.seq) && |x.seq| > 0
-    ensures acc(x.seq) && |x.seq| == |old(x.seq)|
-    ensures x.seq[0] != 0
+method check_aligned(x: Ref)
+    requires acc(x.seq)
+    ensures acc(x.seq)
+    ensures |x.seq| == |old(x.seq)| + 1
 {
     var idx_zero: Ptr32 := offset(x, 0)
     var idx_one: Ptr32 := next(idx_zero)
 
     assert idx_zero != idx_one
-    x.seq := x.seq[0 := address(idx_zero)]
+    x.seq := x.seq ++ Seq(0)
 
     define aligned(p) (address(p) % 4 == 0)
     if (aligned(idx_zero)) {
